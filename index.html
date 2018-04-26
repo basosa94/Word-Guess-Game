@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<title>Hangman</title>
+	<!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
+	<!-- Add link to Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+
+
+	
+<body class="container" style="background-image: url('assets/images/thumb-1920-592678.jpg'); background-size:cover;">
+	<div class="container">
+		<div class="jumbotron" style="background-image: url('assets/images/Pokeball.png');">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="game text-center text-white bg-warning">
+					<h1 class="text-danger">Hangman: Pokemon version</h1>
+					<p class="text-danger">Press any key to get started!</p>
+					<Container=left justified>
+					<p class="text-danger">Guesses Left: <span id="guesses-left"></span></p>
+					<p class="text-danger">Incorrect Guesses: <span id="wrong-guesses"></span></p>
+					<p class="text-danger">Wins: <span id="win-counter"></span></p>
+					<p class="text-danger">Losses: <span id="loss-counter"></span></p>
+					<h3 class="text-danger" id="word-blank"></h3>
+					
+					<script type="text/javascript" src="assets/javascript/game.js"></script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
