@@ -1,4 +1,4 @@
-// Define variables
+// Define variables //
 var list=["bulbasaur", "pikachu", "jigglypuff", "mew", "snorlax", "magikarp", "squirtle", "charmander"];
 
 var hangmanWord = "";
@@ -11,33 +11,34 @@ var wins = 0;
 var losses = 1;
 var lives = 10;
 
-function startGame(){
-	
-	// 1. Computer chooses word randomly from the list
-	// 2. computer breaks down that random word as letters and replace them with
-	// underscores 
-	// 3. add those underscores to the HTML to display to the player
-	// 4. lives is always equals 10, and rightGuesses is an empty array, 
-	// and wronggueses is empty as well.
-	
-	wrongGuesses = [];
-	lives = 10;
-	rightGuesses = [];
-	
-	
-	hangmanWord = list[Math.floor(Math.random() * list.length)];
-	lettersInHangmanWord = hangmanWord.split("");
-	blank = lettersInHangmanWord.length;
-	
-	for(var i = 0; i < blank; i++){
-			rightGuesses.push("_");
-	}
+// Defining Functions //
+	function startGame() {
+		
+		// 1. Computer chooses word randomly from the list
+		// 2. Computer breaks down that random word as letters and replace them with
+		// 	  underscores 
+		// 3. Add those underscores to the HTML to display to the player
+		// 4. Lives is always equals 10, and rightGuesses is an empty array, 
+		//    and wronggueses is empty as well.
+		
+		wrongGuesses = [];
+		lives = 10;
+		rightGuesses = [];
+		
+		
+		hangmanWord = list[Math.floor(Math.random() * list.length)];
+		lettersInHangmanWord = hangmanWord.split("");
+		blank = lettersInHangmanWord.length;
+		
+		for(var i = 0; i < blank; i++){
+				rightGuesses.push("_");
+		}
 
-	document.getElementById('word-blank').innerHTML = rightGuesses.join(" ");
-	document.getElementById('guesses-left').innerHTML = lives;	
-}
-	
-	function checkLetters(letter){
+		document.getElementById('word-blank').innerHTML = rightGuesses.join(" ");
+		document.getElementById('guesses-left').innerHTML = lives;	
+	}
+		
+	function checkLetters(letter) {
 			
 		// 1. Compare the letter the user picks matches any of the letters in the word
 		// 2. I want a conditional statement to determine if the letter the user picked
@@ -63,8 +64,7 @@ function startGame(){
 			wrongGuesses.push(letter)
 		}
 	}
-	
-	
+		
 	function roundComplete() {
 			
 		// 1. Its going to update the HTML with letters that are in the word
@@ -89,6 +89,7 @@ function startGame(){
 		}
 	}
 
+	// Main Process//
 	startGame();
 	document.onkeyup = function(event) {
 			
