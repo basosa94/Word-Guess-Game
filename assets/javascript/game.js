@@ -1,4 +1,4 @@
-// Define variables //
+// 1. Defining variables //
 var list=["bulbasaur", "pikachu", "jigglypuff", "mew", "snorlax", "magikarp", "squirtle", "charmander"];
 
 var hangmanWord = "";
@@ -11,7 +11,7 @@ var wins = 0;
 var losses = 1;
 var lives = 10;
 
-// Defining Functions //
+// 2. Defining Functions //
 	function startGame() {
 		
 		// 1. Computer chooses word randomly from the list
@@ -89,7 +89,7 @@ var lives = 10;
 		}
 	}
 
-	// Main Process//
+	//3.Main Process//
 	startGame();
 	document.onkeyup = function(event) {
 			
